@@ -1,7 +1,7 @@
 import { UserService } from './../../services/user.service';
 import { User } from './../../model/user';
-import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-user',
@@ -14,7 +14,7 @@ export class AddUserComponent implements OnInit {
   user: User;
   idx = '0';
 
-  constructor(private route: ActivatedRoute, private userService:UserService) { }
+  constructor(private router: Router,private route: ActivatedRoute, private userService:UserService) { }
 
   ngOnInit() {
     this.user = new User();
@@ -26,6 +26,8 @@ export class AddUserComponent implements OnInit {
     this.userService.addUser({id,name,email,phone,password} as User).subscribe(user => {
         this.users.push(user);
       });
-      this.close();
+      this.router.navigateByUrl('/..', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['dashboard/users']);
+    });
   }
 }

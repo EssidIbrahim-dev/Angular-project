@@ -49,7 +49,7 @@
       "id": 21,
       "name": "Nike Wearallday Men's Shoe",
       "price": "350",
-      "like": 52,
+      "like": 55,
       "quantity": "60",
       "gender": "men",
       "image": "air-force-1-07-shoe-6jXPDp.jpg"
@@ -116,6 +116,15 @@
       "quantity": "20",
       "gender": "women",
       "image": "nike-womens.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Nike Air Max 270 React SE Women's Shoes",
+      "price": "250",
+      "like": "5",
+      "quantity": "20",
+      "gender": "women",
+      "image": "515QQdh+ZQL._AC_UL1200_.jpg"
     }
   ],
   "users": [
@@ -152,7 +161,14 @@
     {
       "id": 28,
       "name": "fatma essid",
-      "email": "30",
+      "email": "essidibrahim@gmail.com",
+      "phone": "21100511",
+      "password": "essid123"
+    },
+    {
+      "id": 29,
+      "name": "med essid",
+      "email": "essidibrahim@gmail.com",
       "phone": "21100511",
       "password": "essid123"
     }
@@ -221,9 +237,14 @@
       "image": "13-150_Nike_Football_3_4_Sole-05d_original.jpg"
     },
     {
-      "id": 6,
-      "name": "liquide250",
-      "image": "flex2020.jpg"
+      "id": 7,
+      "name": "Nike Air Max 2020 Red Movement Fitness",
+      "image": "20NIKYJRMRCVPR13LBOS_White_Blue.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Nike Air max",
+      "image": "20200819-nike-blp-cb1.jpg"
     }
   ],
   "homescrolls": [
@@ -254,13 +275,13 @@
     },
     {
       "id": 6,
-      "name": "fatma essid",
+      "name": "nike pink",
       "image": "nike-air-max-2090.jpg"
     },
     {
-      "id": 7,
-      "name": "liquid120",
-      "image": "515QQdh+ZQL._AC_UL1200_.jpg"
+      "id": 8,
+      "name": "nike scroll 270",
+      "image": "mbappe.jpg"
     }
   ]
 }
