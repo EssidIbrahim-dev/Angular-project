@@ -1,0 +1,68 @@
+<div *ngIf="productInUpdate">
+
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Name :</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputEmail3" [(ngModel)]="productInUpdate.name" #n="ngModel" required  #name>
+    </div>
+    <div class="alert alert-danger" *ngIf="n.touched && n.invalid">
+      Name is required
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Price :</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" [(ngModel)]="productInUpdate.price" #p="ngModel" required  #price>
+    </div>
+
+    <div class="alert alert-danger" *ngIf="p.touched && p.invalid">
+      Price is required
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Quantity :</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" [(ngModel)]="productInUpdate.quantity" #q="ngModel" required  #quantity>
+    </div>
+
+    <div class="alert alert-danger" *ngIf="q.touched && q.invalid">
+      Image is required
+    </div>
+    <div class="alert alert-danger" *ngIf="q.value<0 ">
+      quantity must be positive number
+    </div>
+  </div>
+
+  <div class="form-group">
+    &nbsp;Men&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input class="form-check-input" type="radio" value="dog" [(ngModel)]="productInUpdate.gender" name="gob" value="men" [checked]="true" />
+    &nbsp;Women&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<input class="form-check-input" type="radio" value="dog" [(ngModel)]="productInUpdate.gender" name="gob" value="women" [checked]="true"/>
+    {{productInUpdate.gender | json}}
+  </div>
+
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Like :</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" [(ngModel)]="productInUpdate.like" #l="ngModel" required  #like>
+    </div>
+
+    <div class="alert alert-danger" *ngIf="l.touched && l.invalid">
+      Like is required
+    </div>
+    <div class="alert alert-danger" *ngIf="l.value<0 ">
+      Like must be positive number
+    </div>
+  </div>
+
+  <form  [formGroup]="form" >
+    <div class="form-group">
+      <label>Image</label>
+      <input type="file" name="image" class="form-control" [(ngModel)]="productInUpdate.image"
+             #x="ngModel" required #image (change)="onFileSelected($event)" [ngModelOptions]="{standalone: true}">
+    </div>
+    </form>
+
+  <button (click)="save()" class="btn btn-primary">Save Change</button> &nbsp;
+  <button (click)="close()" class="btn btn-primary">Cancel</button>
+</div>

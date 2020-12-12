@@ -1,0 +1,36 @@
+<html>
+  <body>
+
+    <nav class="main-menu">
+      <div class="row title">
+        <p style="font-family:fantasy;color:#ffff">&nbsp;&nbsp;Nike&nbsp;</p><p style="font-family:Sans-serif;color:#ffff">Just Do It</p>
+      </div>
+            <ul>
+
+                <li class="has-subnav">
+                    <p><i class="fa fa-folder-open fa-2x"></i><span class="nav-text">Pages</span></p>
+                </li>
+                <li>
+                    <a routerLink="/dashboard/products"><i class="fa fa-bar-chart-o fa-2x"></i><span class="nav-text"> Products</span></a>
+                </li>
+                <li>
+                    <a routerLink="/dashboard/users"><i class="fa fa-font fa-2x"></i><span class="nav-text">Users</span></a>
+                </li>
+                <li>
+                   <a routerLink="/dashboard/homescrolls"><i class="fa fa-table fa-2x"></i><span class="nav-text">Home Scroll</span></a>
+                </li>
+                <li>
+                   <a routerLink="/dashboard/menscrolls"><i class="fa fa-map-marker fa-2x"></i><span class="nav-text">Men Scroll</span></a>
+                </li>
+                <li>
+                  <a routerLink="/dashboard/womenscrolls"><i class="fa fa-map-marker fa-2x"></i><span class="nav-text">Women Scroll</span></a>
+               </li>
+            </ul>
+            <ul class="logout">
+                <li>
+                   <a href="#" (click)="logout()"><i class="fa fa-power-off fa-2x"></i><span class="nav-text">Logout</span></a>
+                </li>
+            </ul>
+        </nav>
+  </body>
+    </html>

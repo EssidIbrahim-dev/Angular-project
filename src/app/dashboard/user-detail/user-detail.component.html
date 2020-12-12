@@ -1,0 +1,26 @@
+<div class="container" *ngIf="userIn">
+  <div class="alert alert-secondary" role="alert">
+    <div class="row">
+      <div class="col-6">
+        <div class="row">
+          <div class="col"><span style="font-size: medium"> <b>  User Name :  </b> </span> </div>
+          <div class="col">{{userIn.name}}</div>
+        </div>
+        <div class="row">
+          <div class="col"><span style="font-size: medium">  <b> Email  :  </b></span> </div>
+          <div class="col">{{userIn.email}}</div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="row">
+          <div class="col"><span style="font-size: medium"> <b>  Phone :  </b> </span> </div>
+          <div class="col">{{userIn.phone}}</div>
+        </div>
+        <div class="row">
+          <div class="col"><span style="font-size: medium">  <b>  Password  :  </b></span> </div>
+          <div class="col">{{userIn.password}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

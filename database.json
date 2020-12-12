@@ -1,0 +1,266 @@
+{
+  "products": [
+    {
+      "id": 16,
+      "name": "Nike Air Max 270 React SE Women's Shoes",
+      "price": "220",
+      "like": 10,
+      "quantity": "350",
+      "gender": "women",
+      "image": "Capture.png"
+    },
+    {
+      "id": 17,
+      "name": "Nike Women's Running Shoes",
+      "price": "340",
+      "like": 25,
+      "quantity": "25",
+      "gender": "women",
+      "image": "nike-air-max.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Nike Air Max 270 - Barely Rose",
+      "price": "420",
+      "like": 18,
+      "quantity": "40",
+      "gender": "women",
+      "image": "https.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Women's Shoes Nike Air ",
+      "price": "330",
+      "like": 16,
+      "quantity": "40",
+      "gender": "women",
+      "image": "nike-air-max.jpg"
+    },
+    {
+      "id": 20,
+      "name": "NIKE AIR MAX 270 ",
+      "price": "400",
+      "like": 15,
+      "quantity": "25",
+      "gender": "women",
+      "image": "nike-air-max-2090.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Nike Wearallday Men's Shoe",
+      "price": "350",
+      "like": 52,
+      "quantity": "60",
+      "gender": "men",
+      "image": "air-force-1-07-shoe-6jXPDp.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Nike Air Sport Running Shoes ",
+      "price": "250",
+      "like": 43,
+      "quantity": "50",
+      "gender": "men",
+      "image": "20200819-nike-blp-cb1.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Nike Air Max 2020 Red Movement Fitness",
+      "price": "450",
+      "like": 51,
+      "quantity": "70",
+      "gender": "men",
+      "image": "vegan-nike-free-flyknit-4-0-best-sneakers-men-running-shoe-sports.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Nike Mercurial Superfly Pro ",
+      "price": "750",
+      "like": 11,
+      "quantity": "40",
+      "gender": "men",
+      "image": "20103044_l.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Nike Vapor Edge Turf Football Shoe",
+      "price": "450",
+      "like": 14,
+      "quantity": "40",
+      "gender": "men",
+      "image": "cheap.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Nike Phantom Venom Academy ",
+      "price": "1250",
+      "like": "23",
+      "quantity": "1500",
+      "gender": "men",
+      "image": "nike-air-max-2090.jpg"
+    },
+    {
+      "id": 27,
+      "name": "liquide",
+      "price": "440",
+      "like": "27",
+      "quantity": "500",
+      "gender": "men",
+      "image": "nike-womens.jpg"
+    },
+    {
+      "id": 28,
+      "name": "fatma essid",
+      "price": "2500",
+      "like": "25",
+      "quantity": "20",
+      "gender": "women",
+      "image": "nike-womens.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "essid ibrahim",
+      "email": "essidibrahim@gmail.com",
+      "phone": 55494446,
+      "avatar": "avatar.png",
+      "password": "essid123"
+    },
+    {
+      "id": 2,
+      "name": "med ibrahim",
+      "email": "essidibrahim@yahoo.com",
+      "phone": 55494446,
+      "avatar": "avatar2.png",
+      "password": "essid123"
+    },
+    {
+      "email": "frere@gg.com",
+      "password": "fffrfr",
+      "id": 11,
+      "name": "liquidess",
+      "phone": 2114124
+    },
+    {
+      "email": "essidibrahim@gmail.com",
+      "password": "essid123",
+      "id": 27,
+      "phone": 21100511,
+      "name": "liquidess"
+    },
+    {
+      "id": 28,
+      "name": "fatma essid",
+      "email": "30",
+      "phone": "21100511",
+      "password": "essid123"
+    }
+  ],
+  "menscrolls": [
+    {
+      "id": 1,
+      "name": "menscroll",
+      "image": "36528135.webp"
+    },
+    {
+      "id": 2,
+      "name": "menscroll",
+      "image": "data1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "menscroll",
+      "image": "Nike-Free-3.0-Flyknit-ou-le-plaisir-absolu.jpg"
+    },
+    {
+      "id": 4,
+      "name": "menscroll",
+      "image": "BUSA.jpg"
+    },
+    {
+      "id": 5,
+      "name": "liquide200",
+      "image": "nike-air-max-2090.jpg"
+    },
+    {
+      "id": 6,
+      "name": "liquid120",
+      "image": "nike-womens.jpg"
+    },
+    {
+      "id": 7,
+      "name": "liquid120",
+      "image": "https.jpg"
+    },
+    {
+      "id": 8,
+      "name": "fatma essid",
+      "image": "nike-air-max-2090.jpg"
+    }
+  ],
+  "womenscrolls": [
+    {
+      "id": 1,
+      "name": "womenscroll",
+      "image": "000127972_illustration_large.jpg"
+    },
+    {
+      "id": 2,
+      "name": "womenscroll",
+      "image": "59668_10151158048116309_1444806979_n-800x500.jpg"
+    },
+    {
+      "id": 3,
+      "name": "womenscroll",
+      "image": "kyrie.jpg"
+    },
+    {
+      "id": 4,
+      "name": "womenscroll",
+      "image": "13-150_Nike_Football_3_4_Sole-05d_original.jpg"
+    },
+    {
+      "id": 6,
+      "name": "liquide250",
+      "image": "flex2020.jpg"
+    }
+  ],
+  "homescrolls": [
+    {
+      "id": 1,
+      "name": "Rugby Nike make it for 2020",
+      "image": "Rugby-nike-make-it-count-XV-de-france.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Saveur Caramel ",
+      "image": "unnamed.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Start Running Nike Shoes",
+      "image": "a70fd0cf1082a003355e4110e4faa2dd.jpg"
+    },
+    {
+      "id": 4,
+      "name": "liquid120",
+      "image": "nike-air-max.jpg"
+    },
+    {
+      "id": 5,
+      "name": "liquid120",
+      "image": "515QQdh+ZQL._AC_UL1200_.jpg"
+    },
+    {
+      "id": 6,
+      "name": "fatma essid",
+      "image": "nike-air-max-2090.jpg"
+    },
+    {
+      "id": 7,
+      "name": "liquid120",
+      "image": "515QQdh+ZQL._AC_UL1200_.jpg"
+    }
+  ]
+}

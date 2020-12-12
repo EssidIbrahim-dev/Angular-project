@@ -1,0 +1,29 @@
+<div class="container" *ngIf="productIn">
+  <div class="" role="alert">
+    <img src="{{URL}}{{productIn.image}}" alt="img" class=" rounded">
+    <div class="row">
+      <div class="col-6">
+        <div class="row">
+
+          <div class="col"><span style="font-size: medium"> <b>  Product Name :  </b> </span> </div>
+          <div class="col">{{productIn.name}}</div>
+        </div>
+        <div class="row">
+          <div class="col"><span style="font-size: medium">  <b> Quantity  :  </b></span> </div>
+          <div class="col">{{productIn.quantity}}</div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="row">
+          <div class="col"><span style="font-size: medium"> <b>  Price :  </b> </span> </div>
+          <div class="col">{{productIn.price}}</div>
+        </div>
+        <div class="row">
+          <div class="col"><span style="font-size: medium">  <b>  Like  :  </b></span> </div>
+          <div class="col">{{productIn.like}}&nbsp;<i class="fa fa-star fa-spin fa-lg"></i>&nbsp;stars</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

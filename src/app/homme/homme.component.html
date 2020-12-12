@@ -1,0 +1,25 @@
+<app-men-carousel></app-men-carousel>
+
+
+<div class="col-md-12 text-center">
+  <div class=" my-5 w-25 mx-auto"></div>
+  <h1>All Men Shoes </h1>
+</div>
+
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="searchbar">
+      <input class="search_input" type="text" name=""  [(ngModel)]="name" (ngModelChange)="search()" placeholder="Search...">
+      <a href="#" class="search_icon"><i class="fa fa-search"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="row cardP">
+  <app-product *ngFor="let p of products| orderBy: key: reverse | paginate : {itemsPerPage: 6 ,currentPage: p , id: 'paginate'}; let i=index;" [product]="p"></app-product>
+  <div class="container pagination">
+    <pagination-controls (pageChange)="p = $event" id="paginate"></pagination-controls></div>
+  </div>
+
+
+  <app-footer></app-footer>

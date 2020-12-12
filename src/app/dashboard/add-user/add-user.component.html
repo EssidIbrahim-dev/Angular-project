@@ -1,0 +1,47 @@
+<h1>Add user Form</h1>
+<form #f="ngForm">
+
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" name="name" class="form-control" [(ngModel)]="user.name"
+           required minlength="3" #t="ngModel"  #name>
+  </div>
+  <div class="alert alert-danger" *ngIf="t.touched && t.invalid">
+    <div *ngIf="t.errors.required">name is required</div>
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" name="quantity" class="form-control" [(ngModel)]="user.email"
+           #q="ngModel" required  #email >
+  </div>
+  <div class="alert alert-danger" *ngIf="q.touched && q.invalid">
+    email is required
+  </div>
+
+
+  <div class="form-group">
+    <label>Phone</label>
+    <input type="number" name="price" class="form-control" [(ngModel)]="user.phone"
+           #p="ngModel" required #phone>
+  </div>
+  <div class="alert alert-danger" *ngIf="p.touched && p.invalid">
+    phone is required
+  </div>
+
+
+  <div class="form-group">
+    <label>Password</label>
+    <input type="text" name="like" class="form-control" [(ngModel)]="user.password"
+           #c="ngModel" required #password>
+  </div>
+  <div class="alert alert-danger" *ngIf="c.touched && c.invalid">
+    password is required
+  </div>
+
+
+  <br/>
+  <button class="btn btn-success" [disabled]="f.invalid ||q.value<0" (click)="add(0,name.value,email.value,phone.value,password.value)" >
+    save
+  </button>
+</form>

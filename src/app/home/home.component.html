@@ -1,0 +1,86 @@
+
+<ngb-carousel  class="carrouselA"
+[showNavigationArrows]="true"
+[showNavigationIndicators]="true"
+interval="1900"
+[keyboard]="true"
+[pauseOnHover]="true"
+[wrap]="true"
+[activeId]="'firstSlide'" >
+
+  <ng-template ngbSlide *ngFor="let slide of homescrolls" [id]="slide.id">
+    <div class="picsum-img-wrapper">
+      <img src="{{URL}}{{slide.image}}" alt="Angular Carousel 1">
+    </div>
+    <div class="carousel-caption">
+      <h3>{{slide.name}}</h3>
+    </div>
+  </ng-template>
+
+</ngb-carousel>
+
+<!-- Men Card -->
+<div class="col-md-12 text-center">
+  <div class=" my-5 w-25 mx-auto"></div>
+  <h1>Top Men Shoes </h1>
+</div>
+
+<div class="container" >
+  <hr class="my-5" >
+  <div class="row">
+<div class="card" *ngFor="let prod of menproducts | paginate : {itemsPerPage: 6 ,currentPage: prod};" >
+  <img class="card-img-top" src="{{URL}}{{prod.image}}" alt="Card image cap" style="width: 285px;height: 200px;">
+  <div class="card-body">
+    <h5 class="card-title">{{prod.name}}</h5>
+    <p class="card-text" style=" font-weight: bold;">{{prod.price}}&nbsp;DT</p>
+    <button type="button" class="btn btn-outline-dark" (click)="on(prod.id)"><i class="fa fa-eye"></i>&nbsp;Detail</button>
+    <button type="button" class="btn btn-outline-dark" (click)="incrementLike(prod.id)">{{prod.like}} <i class="fa fa-heart"></i></button>&nbsp;
+
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Women Card -->
+<div class="col-md-12 text-center">
+  <div class=" my-5 w-25 mx-auto"></div>
+  <h1>Top Women Shoes </h1>
+</div>
+
+<div class="container" >
+  <hr class="my-5" >
+  <div class="row">
+<div class="card" *ngFor="let prod of womenproducts | paginate : {itemsPerPage: 6 ,currentPage: prod };">
+  <img class="card-img-top" src="{{URL}}{{prod.image}}" alt="Card image cap" style="width: 285px;height: 200px;">
+  <div class="card-body">
+    <h5 class="card-title">{{prod.name}}</h5>
+    <p class="card-text" style=" font-weight: bold;">{{prod.price}}&nbsp;DT</p>
+     <button type="button" class="btn btn-outline-dark" (click)="on(prod.id)"><i class="fa fa-eye"></i>&nbsp;Detail</button>
+    <button type="button" class="btn btn-outline-dark" (click)="incrementLike(prod.id)">{{prod.like}} <i class="fa fa-heart"></i></button>&nbsp;
+ </div>
+</div>
+</div>
+</div>
+
+<!-- Baby Card -->
+
+<div class="col-md-12 text-center">
+       <div class="border-top border-dark my-5 w-25 mx-auto"></div>
+       <h1>More Pages</h1>
+       <div class="border-top border-dark my-5 w-25 mx-auto"></div>
+       <a class="btn btn-lg btn-outline-dark mb-5" [routerLink]="['/men']"><i class="fa fa-male"></i>&nbsp;Men Shoes</a>
+       <a class="btn btn-lg btn-outline-dark mb-5" [routerLink]="['/women']"><i class="fa fa-female"></i>&nbsp;Women Shoes</a>
+
+</div>
+
+<app-footer></app-footer>
+
+<div id="overlay2">
+  <div id="overlayinside2">
+    <div class="alert alert-light" role="alert">
+      <a  (click)="off()">x</a>
+      <app-product-detail [productIn]="selectedProduct"></app-product-detail>
+    </div>
+  </div>
+</div>
+

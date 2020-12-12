@@ -1,0 +1,94 @@
+<app-sidebar></app-sidebar>
+<div class="list">
+  <div class="">
+
+    <a (click)="on()" style="color: white"  class="btn btn-primary a-btn-slide-text">
+      <i class="fa fa-plus "></i>
+      <span><strong>&nbsp;Add</strong></span>
+    </a>
+  </div>
+  <nav class="">
+    <input class="form-control" type="text" name="name" [(ngModel)]="name" (ngModelChange)="search()" placeholder="Enter data to search">
+  </nav>
+  <br>
+  <div class="">
+    <table id="dtBasicExample" class="table table-striped table-bordered" >
+      <thead>
+      <tr>
+        <th class="th-sm" (click)="sort('id')">Id&nbsp;<i class="fa fa-sort"></i></th>
+        <th class="th-sm" (click)="sort('name')">Name&nbsp;<i class="fa fa-sort"></i></th>
+        <th class="th-sm">Email</th>
+        <th class="th-sm">Phone</th>
+        <th class="th-sm">Password</th>
+        <th class="th-sm">Avatar</th>
+        <th class="th-sm" style="width:25%">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users | orderBy: key: reverse | paginate : {itemsPerPage: 5 ,currentPage: p , id: 'paginate'};">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.password}}</td>
+        <td><ngx-avatar name="{{user.name}}"></ngx-avatar></td>
+        <td>
+          <a (click)="onNUpdate(user.id)" style="color: white"  class="btn btn-primary a-btn-slide-text">
+            <i class="fa fa-pencil"></i>
+            <span><strong>&nbsp;Edit</strong></span>
+          </a>
+
+          <a (click)="onN(user.id)" style="color: white"  class="btn btn-success a-btn-slide-text">
+            <i class="fa fa-eye"></i>
+            <span><strong>&nbsp;View</strong></span>
+          </a>
+
+          <a (click)="ondelete(user.id)" style="color: white"  class="btn btn-danger a-btn-slide-text">
+            <i class="fa fa-remove"></i>
+            <span><strong>&nbsp;Delete</strong></span>
+          </a>
+        </td>
+      </tr>
+      </tbody>
+     </table>
+     <pagination-controls (pageChange)="p = $event" id="paginate"></pagination-controls><br>
+  </div>
+
+  <!-- interface ajout user-->
+  <div id="overlay">
+    <div id="overlayinside">
+      <div class="alert alert-light" role="alert">
+        <a class="d-flex justify-content-end" (click)="off()"><i class="fa fa-times-circle"></i>
+        </a>
+        <app-add-user></app-add-user>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- interface detail user -->
+
+ <div id="overlay2">
+    <div id="overlayinside2">
+      <div class="alert alert-light" role="alert">
+        <a class="d-flex justify-content-end" (click)="ofF();" ><i class="fa fa-times-circle"></i>
+        </a>
+        <app-user-detail [userIn]="selectedUser"></app-user-detail>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- interface update user -->
+ <div id="overlay3">
+    <div id="overlayinside3">
+      <div class="alert alert-light" role="alert">
+        <a class="d-flex justify-content-end" (click)="ofFUpdate()" ><i class="fa fa-times-circle"></i>
+        </a>
+        <app-update-user [userInUpdate]="selectedUser"></app-update-user>
+      </div>
+    </div>
+  </div>
+
+  </div>

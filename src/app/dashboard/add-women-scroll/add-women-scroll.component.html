@@ -1,0 +1,30 @@
+<h1>Add Women Scroll Form</h1>
+<form #f="ngForm"  >
+
+  <div class="form-group">
+    <label>Title:</label>
+    <input type="text" name="name" class="form-control" [(ngModel)]="womenscroll.name"
+           required minlength="3" #t="ngModel"  #name>
+  </div>
+  <div class="alert alert-danger" *ngIf="t.touched && t.invalid">
+    <div *ngIf="t.errors.required">title is required</div>
+    <div *ngIf="t.errors.minlength">title minlength is 3</div>
+
+  </div>
+
+  <form  [formGroup]="form" >
+  <div class="form-group">
+    <label>Image</label>
+    <input type="file" name="image" class="form-control" [(ngModel)]="womenscroll.image"
+           #x="ngModel" required #image (change)="onFileSelected($event)" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="alert alert-danger" *ngIf="x.touched && x.invalid">
+   Image is required
+  </div>
+  </form>
+
+  <br/>
+  <button class="btn btn-success" [disabled]="f.invalid ||f.errors ||f.value<0" (click)="add(0,name.value,image.value)" >
+    save
+  </button>
+</form>
